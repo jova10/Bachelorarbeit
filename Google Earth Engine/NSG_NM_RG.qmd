@@ -1,0 +1,71 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.10-Prizren">
+  <identifier>Naturschutzgebiete_DTK25</identifier>
+  <parentidentifier></parentidentifier>
+  <language>GER</language>
+  <type>dataset</type>
+  <title>Naturschutzgebiete (NSG)</title>
+  <abstract>Digitale landesweite Übersichtskarte aller Geometrien der in Niedersachsen per Verordnung (§ 16 NNatSchG Abs. 1) festgesetzten Naturschutzgebiete (NSG).
+Diese Daten sind auch im INSPIRE Datenmodell „Annex 1: Schutzgebiete“ erhältlich. Die Bereitstellung erfolgt per Darstellungs- und Downloaddienst, deren URLs in den Transferoptionen angegeben sind.
+
+</abstract>
+  <keywords vocabulary="gmd:topicCategory">
+    <keyword>Schutzgebiete</keyword>
+    <keyword>Protected sites</keyword>
+    <keyword>Regional</keyword>
+    <keyword>INSPIRE</keyword>
+    <keyword>inspireidentifiziert</keyword>
+    <keyword>opendata</keyword>
+    <keyword>Naturschutz</keyword>
+    <keyword>Naturschutzgebiet</keyword>
+    <keyword>Fachbehörde für Naturschutz</keyword>
+    <keyword>NLWKN</keyword>
+    <keyword>Niedersächsischer Landesbetrieb für Wasserwirtschaft, Küsten- und Naturschutz</keyword>
+  </keywords>
+  <contact>
+    <contactAddress>
+      <type></type>
+      <address></address>
+      <city></city>
+      <administrativearea></administrativearea>
+      <postalcode></postalcode>
+      <country></country>
+    </contactAddress>
+    <name>NLWKN – Daten-Servicestelle</name>
+    <organization>Niedersächsischer Landesbetrieb für Wasserwirtschaft, Küsten- und Naturschutz (NLWKN)</organization>
+    <position>NLWKN – Daten-Servicestelle</position>
+    <voice></voice>
+    <fax></fax>
+    <email>daten@nlwkn.niedersachsen.de</email>
+    <role>Ansprechpartner</role>
+  </contact>
+  <links/>
+  <history>Zuständige Stellen waren bis 31.12.2004 die ehemaligen Bezirksregierungen, von 2005 bis Ende 2007 in Natura2000-Gebieten i.d.R. der Niedersächsische Landesbetrieb für Wasserwirtschaft, Küsten- und Naturschutz (NLWKN) und außerhalb von Natura2000-Gebieten die Unteren Naturschutzbehörden (UNB). Seit Anfang 2008 liegt die Zuständigkeit für die Ausweisung von Naturschutzgebieten generell bei den Unteren Naturschutzbehörden. Die Erstausweisung und Veränderungen der Gebietsabgrenzungen (i. d. R. im Maßstab 1:5.000) werden dem NLWKN von den Unteren Naturschutzbehörden zur Verfügung gestellt. Die Fachbehörde für Naturschutz (FfN) im NLWKN erzeugt daraus auf Basis der DTK 1:25.000 eine Landesweite Übersicht der Schutzgebiete in Niedersachsen auf Grundlage des § 33 Abs. 1 S. 3 NNatSchG.</history>
+  <dates>
+    <date type="Created" value="2009-07-31T00:00:00"/>
+    <date type="Revised" value="2023-12-31T00:00:00"/>
+  </dates>
+  <fees></fees>
+  <constraints type="Nutzungseinschränkungen">Geometrien nur auf Grundlage der Digitalen Topografischen Karte 1:25.000 (DTK25) aussagekräftig. 
+Rechtlich verbindlich sind ausnahmslos die Gebietsabgrenzungen und Flächenangaben in den jeweiligen Verordnungen oder Gesetzen der Schutzgebiete</constraints>
+  <constraints type="Sicherheitseinschränkungen"></constraints>
+  <rights>© 2024, daten@nlwkn.niedersachsen.de</rights>
+  <license>Datenlizenz Deutschland – Namensnennung – Version 2.0 (https://www.govdata.de/dl-de/by-2-0)</license>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt>PROJCRS["ETRS89 / UTM zone 32N (zE-N)",BASEGEOGCRS["ETRS89",ENSEMBLE["European Terrestrial Reference System 1989 ensemble",MEMBER["European Terrestrial Reference Frame 1989"],MEMBER["European Terrestrial Reference Frame 1990"],MEMBER["European Terrestrial Reference Frame 1991"],MEMBER["European Terrestrial Reference Frame 1992"],MEMBER["European Terrestrial Reference Frame 1993"],MEMBER["European Terrestrial Reference Frame 1994"],MEMBER["European Terrestrial Reference Frame 1996"],MEMBER["European Terrestrial Reference Frame 1997"],MEMBER["European Terrestrial Reference Frame 2000"],MEMBER["European Terrestrial Reference Frame 2005"],MEMBER["European Terrestrial Reference Frame 2014"],ELLIPSOID["GRS 1980",6378137,298.257222101,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[0.1]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4258]],CONVERSION["UTM zone 32N with prefix",METHOD["Transverse Mercator",ID["EPSG",9807]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",9,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9996,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",32500000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Topographic mapping."],AREA["Germany - onshore and offshore between 6°E and 12°E - Baden-Wurtemberg, Bayern, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thuringen."],BBOX[47.27,6,55.47,12.01]],ID["EPSG",4647]]</wkt>
+      <proj4>+proj=tmerc +lat_0=0 +lon_0=9 +k=0.9996 +x_0=32500000 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+      <srsid>27825</srsid>
+      <srid>4647</srid>
+      <authid>EPSG:4647</authid>
+      <description>ETRS89 / UTM zone 32N (zE-N)</description>
+      <projectionacronym>tmerc</projectionacronym>
+      <ellipsoidacronym>EPSG:7019</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent>
+    <spatial maxz="0" maxx="11.49054800000000043" dimensions="2" maxy="53.91182799999999986" minx="6.36975599999999975" crs="EPSG:4647" minz="0" miny="51.2800889999999967"/>
+  </extent>
+</qgis>
