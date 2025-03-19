@@ -21,7 +21,7 @@ function maskS2clouds(image) {
     bands: ['B4', 'B3', 'B2'],
   };
   
-  // Visualisierungsparameter für NDWI nach Gao
+  // Visualisierungsparameter für NDWI Gao
   var ndwiVisualization = {
     min: -1.0,
     max: 1.0,
@@ -35,7 +35,7 @@ function maskS2clouds(image) {
     palette: ['red', 'yellow', 'green']  // Blau für Wasser, Grün/Weiß für Land
   };
   
-  // NDWI nach Gao Berechnung: (NIR - SWIR) / (NIR + SWIR)
+  // NDWI Gao Berechnung: (NIR - SWIR) / (NIR + SWIR)
   function calculateNDWI(image) {
     return image.normalizedDifference(['B8', 'B11']).rename('NDWI2');
   }
@@ -62,9 +62,8 @@ function maskS2clouds(image) {
     print('Anzahl der Bilder im Monat ' + ee.Date.fromYMD(year, month, 1).format('MMM yyyy').getInfo() + ':', count);
     
     // Wähle das Bild mit der geringsten Wolkenbedeckung
-    var bestImage = collection.sort('CLOUDY_PIXEL_PERCENTAGE').first();  // Sortiere nach Wolkenbedeckung und nimm das erste Bild
+    return collection.sort('CLOUDY_PIXEL_PERCENTAGE').first();  // Sortiere nach Wolkenbedeckung und nimm das erste Bild
     
-    return bestImage;
   }
   
   // AOI definieren
@@ -74,9 +73,6 @@ function maskS2clouds(image) {
   var months = ee.List.sequence(4, 10);  // Monate 4 (April) bis 10 (Oktober)
   //Jahre, für die Daten geladen werden sollen
   var years = [2023];  // 2023
-  
-  // Initialisiere die Layer-Liste
-  var layersList = []
   
   // Schleife über die Monate
   years.forEach(function(year)  {
@@ -107,12 +103,10 @@ function maskS2clouds(image) {
       
         // NDWI als Layer hinzufügen
         Map.addLayer(ndwi, ndwiVisualization, 'NDWI ' + ee.Date.fromYMD(year, month, 1).format('MMM yyyy').getInfo());
-        layersList.push({layer: ndwi, name: 'NDWI ' + monthAbbreviation + ' ' + year});
   
         // NDVI als Layer hinzufügen
         Map.addLayer(ndvi, ndviVisualization, 'NDVI ' + ee.Date.fromYMD(year, month, 1).format('MMM yyyy').getInfo());
-        layersList.push({layer: ndvi, name: 'NDVI ' + monthAbbreviation + ' ' + year});
-  
+
       }
     });
   });
@@ -217,13 +211,13 @@ function maskS2clouds(image) {
     var image = getMonthlyImage(2023, 4, aoi);  // Beispiel für 2023 und April
   
     if (image) {
-      // NDWI und NDVI-Werte an dieser Position abrufen
+      // NDWI-Werte an dieser Position abrufen
       var ndwiValue = image.normalizedDifference(['B8', 'B11']).rename('NDWI').reduceRegion({
         reducer: ee.Reducer.mean(),  // Reduziert den Wert zu einem einzelnen Pixelwert
         geometry: point,
         scale: 10  // Sentinel-2 hat eine 10m Auflösung für die RGB-Bänder
       });
-      
+      // NDVI-Werte an dieser Position abrufen
       var ndviValue = image.normalizedDifference(['B8', 'B4']).rename('NDVI').reduceRegion({
         reducer: ee.Reducer.mean(),
         geometry: point,
